@@ -11,6 +11,7 @@
 % TODO
 % - windows bar covers plot-windows
 %%
+%%
 function mk_windows_placement(windows_placement_vector, monitor_identifier)    
     %
     % Welcome screen

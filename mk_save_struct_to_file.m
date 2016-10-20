@@ -23,7 +23,7 @@ function mk_save_struct_to_file(struct_name, mode)
             C = {fields{:}, values{:}};
             fmt_str = repmat('%s,', 1, size(C, 2));
             fprintf(fid, [fmt_str(1:end-1), '\n'], C{:});
-        elseif strcmp(mode, 'txt') == 1
+        elseif strcmp(mode, 'dat') == 1
             fields_max = max(cellfun(@length,fields));
             for i = 1:length(fields)
                     fprintf(fid, '%s:\t\t\t\t%s\n', [fields{i}     repmat(' ', 1, fields_max - cellfun(@length,fields(i)))], values{i});
